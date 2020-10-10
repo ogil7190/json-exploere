@@ -9,7 +9,7 @@
     "test": "jest --watchAll --coverage"
   },
   "lint-staged": {
-    "*.{js,jsx,md}": [
+    "*.{js,jsx}": [
       "eslint --fix",
       "git add"
     ]
