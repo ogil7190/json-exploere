@@ -7,3 +7,8 @@
 > 5. Component Level Segregation
 
 Thanks to [Aman Kalra](https://github.com/aman97kalra) for the contribution.
+
+
+# Instructions to run the project
+> 1. npm install
+> 2. npm run start
