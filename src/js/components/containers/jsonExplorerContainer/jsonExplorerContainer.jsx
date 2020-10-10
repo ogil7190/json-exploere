@@ -23,7 +23,10 @@ export class JsonExplorerContainer extends React.Component {
 
         // component state
         this.state = {
-            
+            haveError: false,
+            errorMessage: '',
+            value: '',
+            showTree: false
         };
 
         // bind methods to this
@@ -35,7 +38,30 @@ export class JsonExplorerContainer extends React.Component {
      * @desc bind class methods to current instance
      */
     __bind() {
-        
+        this.handleInputChange = this.handleInputChange.bind( this );
+        this.handleClear = this.handleClear.bind( this );
+        this.showTreeStructure = this.showTreeStructure.bind( this );
+    }
+
+    handleInputChange( value ) {
+        try {
+            const parsed = JSON.parse( value.trim() );
+            this.setState( { parsed, value, haveError: false } );
+        } catch {
+            if( '' === value ) {
+                this.setState( { value, haveError: false } );
+            } else {
+                this.setState( { value, haveError: true } );
+            }
+        }
+    }
+
+    handleClear() {
+        this.setState( { showTree: false, value: '' } );
+    }
+
+    showTreeStructure() {
+        this.setState( { showTree: true } );
     }
 
      /**
@@ -43,7 +69,12 @@ export class JsonExplorerContainer extends React.Component {
      */
     render() {
 		return (
-            <JsonExplorerView />
+            <JsonExplorerView
+                {...this.state}
+                onChange = {this.handleInputChange}
+                showTreeView={this.showTreeStructure}
+                onClear={this.handleClear}
+            />
         );
     }
 }

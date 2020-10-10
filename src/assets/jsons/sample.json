@@ -1,4 +1,9 @@
 {
     "status": "success",
-    "data": {}
+    "data": {
+        "redirectionURL": {
+            "value": "/login"
+        },
+        "items": [ 1, 2, 4]
+    }
 }

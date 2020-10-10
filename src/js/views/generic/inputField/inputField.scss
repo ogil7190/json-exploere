@@ -4,9 +4,25 @@
     width: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
+    position: relative;
 
     &--without-margin{
         margin: 0;
+    }
+
+    &__error {
+        flex-direction: column;
+        border-width: 2px !important;
+        border-color: $theme-red !important;
+
+        &__label {
+            position: absolute;
+            bottom: -30px;
+            text-align: center;
+            margin: 10px;
+            color: $theme-red;
+            font-size: $font-size-h6;
+        }
     }
 
     &__input {
@@ -37,10 +53,10 @@
         border-radius: 5px;
         border-width: 1px;
         border-style: solid;
-        border-color: rgba($theme-black, 0.5);
+        border-color: rgba($theme-secondary-color, 0.5);
 
         &:focus-within{
-            border-color: rgba($theme-secondary-color, 0.5);
+            border-color: rgba($theme-black, 0.5);
         }
     }
 
