@@ -1,9 +1,64 @@
+@import '~scss/app.theme.scss';
+
 .view-tree-viewer {
-    
-    &__value {
+    box-sizing: border-box;
+    height: 300px;
+    overflow: scroll;
+    position: relative;
+
+
+    &__copy {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+
+    &__subtree {
         display: flex;
         flex-direction: column;
-        margin: 5px;
-        margin-left: 20px;
+        margin-left: 30px;
+        margin-bottom: 10px;
+
+        &__value {
+            display: flex;
+            align-items: center;
+            margin: 2px;
+
+            &__type {
+                margin-left: 30px;
+                padding: 0px 5px;
+                margin-right: 5px;
+
+                &--object {
+                    
+                    background-color: lightgrey;
+                }
+
+                &--array {
+                    background-color: lightgreen;
+                }
+
+                &--number {
+                    background-color: pink;
+                }
+
+                &--nil {
+                    background-color: yellow;
+                }
+
+                &--bool {
+                    background-color: lightskyblue;
+                }
+
+                &--string {
+                    background-color: rgba(#f00, 0.5);
+                }
+            }
+
+            &__count {
+                color: $theme-primary-color;
+            }
+        }
     }
 }

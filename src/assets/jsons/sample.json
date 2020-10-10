@@ -4,6 +4,6 @@
         "redirectionURL": {
             "value": "/login"
         },
-        "items": [ 1, 2, 4]
+        "items": [ 1, 2, 4, "ogil"]
     }
 }
