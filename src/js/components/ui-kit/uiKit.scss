@@ -1,0 +1,21 @@
+@import '~scss/app.theme.scss';
+
+.ui-kit{
+    height: 100vh;
+    overflow: scroll;
+    padding: 20px;
+    margin-top: 100px;
+    background: linear-gradient( 45deg, $theme-primary-color, $theme-secondary-color);
+
+    &__title{
+        color: $theme-tertiary-color;
+        font-size: 20px;
+        margin: 10px;
+    }
+
+    &--loading{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

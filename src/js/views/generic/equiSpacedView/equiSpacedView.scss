@@ -1,0 +1,14 @@
+.ui-equi-spaced-view {
+    display: flex;
+
+    &--vertical {
+        flex-direction: column;
+    }
+    &__item {
+        flex: 1;
+        display: flex;
+        align-items: center;
+    }
+
+
+}

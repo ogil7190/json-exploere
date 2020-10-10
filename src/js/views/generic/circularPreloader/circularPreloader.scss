@@ -1,0 +1,65 @@
+@import '~scss/app.theme.scss';
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.view-circular-preloader {
+    &--small {
+        width: 18px;
+        height: 18px;
+        .spinner{
+            border-top-width: 2px;
+        }
+    }
+
+    &--medium {
+        width: 20px;
+        height: 20px;
+        .spinner{
+            border-top-width: 2.5px;
+        }
+    }
+
+    &--large {
+        width: 22px;
+        height: 22px;
+        .spinner{
+            border-top-width: 3px;
+        }
+    }
+
+    &--amount {
+        .spinner{
+            border-top-width: 4px;
+        }
+    }
+
+    &--dark {
+        .spinner {
+            border-top-color: rgba($theme-black, .5);
+        }
+    }
+
+    &--light {
+        .spinner {
+            border-top-color: rgba($theme-white, .5);
+        }
+    }
+
+
+    .spinner {
+        width: 100%;
+        height: 100%;
+        border-top-style: solid;
+        border-right: 3px solid transparent;
+        border-radius: 50%;
+        animation: rotation .8s linear infinite;
+    }
+}
