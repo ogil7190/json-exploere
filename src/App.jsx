@@ -5,12 +5,9 @@ import { DEBUG } from '../app-config';
 import { OverlayContainer } from 'components/containers/overlayContainer';
 
 class _App extends Component {
+  
   constructor( props ) {
     super( props );
-
-    this.state = {
-    };
-
   }
   
   render() {

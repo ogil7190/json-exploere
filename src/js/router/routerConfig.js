@@ -1,6 +1,5 @@
-import { UIKitWithDataFetcher, UiKitWithHeader } from 'components/ui-kit';
-import { LoginContainer } from 'components/containers/loginContainer';
-import { HomeContainer } from 'components/containers/homeContainer';
+import { UiKitWithHeader } from 'components/ui-kit';
+import { JsonExplorerContainer } from 'components/containers/jsonExplorerContainer';
 import * as ROUTE_PATHS from 'constants/route-paths';
 
 export const Routes = {
@@ -8,13 +7,7 @@ export const Routes = {
         path: ROUTE_PATHS.ROOT,
         exact: true,
         data: {},
-        component: LoginContainer
-    },
-    LANDING: {
-        path: ROUTE_PATHS.LANDING,
-        exact: true,
-        data: {},
-        component: HomeContainer
+        component: JsonExplorerContainer
     }
 };
 

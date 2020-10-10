@@ -12,9 +12,7 @@ export const withHeaderAndFooterHoc = ( Component ) => {
             };
         }
         render() {
-            console.log( this.props );
             const showHeader = get( this.props, 'showHeader', true );
-            const showFooter = get( this.props, 'showFooter', true );
             return (
                 <Fragment>
                    { showHeader && <SiteHeaderView/> }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const SiteHeaderView = ( props ) => {
+export const SiteHeaderView = () => {
     const leftArray = [ 'Home', 'Contact', 'Orders' ];
     const rightArray = [ 'Settings', 'About', 'My Account' ];
     return(
@@ -15,7 +15,7 @@ const renderLeftItems = ( { leftArray } ) => {
     return(
         <div className = 'ui-site-header-view__left-items'>
         {
-            leftArray.map( ( item, index ) => {
+            leftArray.map( ( item ) => {
                 return (
                     <div className = 'ui-site-header-view__left-items__item'>
                         <p> {item} </p>
@@ -32,7 +32,7 @@ const renderRightItems = ( { rightArray} ) => {
     return(
         <div className = 'ui-site-header-view__right-items'>
         {
-            rightArray.map( ( item, index ) => {
+            rightArray.map( ( item ) => {
                 return (
                     <div className = 'ui-site-header-view__right-items__item'>
                         <p> {item} </p>

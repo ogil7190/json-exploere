@@ -29,19 +29,6 @@ class _UIKit extends React.Component {
         this.onSuccess = this.onSuccess.bind( this );
     }
 
-    // componentDidMount() {
-    //     const url = 'https://api.unsplash.com/photos/random?count=10&client_id=896979fdb70f80865638d7a4648bf9ce309675335318933eab2bf990af42e295';
-    //     getGenericDataFetch(
-    //         {
-    //             url: url,
-    //             handlers: {
-    //                 success: this.onSuccess,
-    //                 failure: this.onFailure
-    //             }
-    //         }
-    //     );
-    // }
-
     componentDidMount() {
         console.log( 'uiKit.componentDidMount()' );
         getGenericDataFetch(
@@ -67,7 +54,6 @@ class _UIKit extends React.Component {
     }
 
     render() {
-        
         const InputFieldWithDemoHoc = demoHoc( InputField );
 
         return( this.props.loading ?

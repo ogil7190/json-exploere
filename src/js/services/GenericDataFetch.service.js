@@ -14,8 +14,6 @@ export const getGenericDataFetch = ( { path, handlers, params, url } ) => {
             onFailure: handlers.failure
         }
     };
-
-    //  console.log( 'config is', config );
     
     return HTTP.get( config );
 };
